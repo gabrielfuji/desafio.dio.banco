@@ -1,18 +1,22 @@
 package com.company;
 
-public class contaCorrente {
-    public int agencia;
-    public int numero;
-    public int saldo;
+public class contaCorrente extends Conta {
 
-    public void sacar() {
+    public contaCorrente(Cliente cliente) {
+        super(cliente);
+    }
+
+    @Override
+    public void transferir(double valor, Conta contaDestino) {
 
     }
-    public void depositar(){
 
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("=== Extrato Conta Corrente ===");
+        super.imprimirInfosComuns();
     }
-    public void transferir(){
 
-    }
 }
+
 

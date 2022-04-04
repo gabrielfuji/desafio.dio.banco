@@ -1,17 +1,17 @@
 package com.company;
+public class contaPoupanca extends Conta{
+        public contaPoupanca(Cliente cliente) {
+                super(cliente);
+        }
 
-public class contaPoupanca {
-    public int agencia;
-    public int numero;
-    public int saldo;
-
-    public void sacar() {
-
-    }
-    public void depositar(){
+    @Override
+    public void transferir(double valor, Conta contaDestino) {
 
     }
-    public void transferir(){
 
-    }
+    @Override
+        public void imprimirExtrato() {
+                 System.out.println("=== Extrato Conta Poupança ===");
+                 super.imprimirInfosComuns();
+        }
 }
